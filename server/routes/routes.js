@@ -2,41 +2,12 @@ module.exports= function(app) {
     var model     = require('../models/schema');
     var nodemailer = require('../../node_modules/nodemailer');
     var sgTransport = require('../../node_modules/nodemailer-sendgrid-transport');
-    var jsdom = require('../../node_modules/jsdom');
     var path = require('path');
   
     var rootPath = '../../'; //path.resolve(__dirname);
 
-      //app.set('view engine', 'ejs');
-app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'html');
-
-
-    // OMG serverside rendering! ...maybe
-    app.get('/ssrjed', function(req, res) {
-      var Elm = require(path.join(rootPath, 'public/dist/js/app-min.js'));
-      jsdom.env(
-        path.join(rootPath, 'public/index.html'), //with included script src to compiled_elm.js
-        //div id="main"></div>',
-        //'/public/index.html',
-        function (err,window) {
-          if (err != null) {
-            return console.error("error", err);
-          }
-          document = window.document;
-          console.log(document)
-          //Elm.Main.embed(document.getElementById('main'));
-          //Elm.Main.fullscreen();
-          //document.createElement('div')
-          //window.setTimeout(function() {
-
-            res.render('elm-template.html', {
-              head: document.head.innerHTML,
-              body: document.body.innerHTML
-            })
-          //}, 400)
-        }
-      );
+    app.get('/', function(req, res) {
+      res.render('index');
     });
 
     /**

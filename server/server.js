@@ -13,6 +13,11 @@ app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+//app.engine('jade', ejs.renderFile);
+//app.set('view engine', 'html');
+app.set('views', './views');
+app.set('view engine', 'pug');
+
 
 app.use(bodyParser.json());
 
