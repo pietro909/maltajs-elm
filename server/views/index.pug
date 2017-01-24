@@ -12,6 +12,7 @@ html
 
   head
     title MaltaJS
+    script(type='text/javascript', src='dist/js/app.js')
   body
 
     div.container-fluid
@@ -24,6 +25,9 @@ html
 
       section#about.row.content
         include about
+
+      section#contacts.row.content
+        include contacts
 
       footer.footer.row
         include footer
