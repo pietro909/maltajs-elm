@@ -4,10 +4,10 @@ logs
 npm-debug.log*
 *.lock
 .DS_Store
-public/
+#public/
 
 # this template is generated from elm
-source/templates/body-static.html
+#source/templates/body-static.html
 
 # Runtime data
 pids
@@ -34,7 +34,7 @@ coverage
 build/Release
 
 # Dependency directories
-devtools/node_modules
+#devtools/node_modules
 
 # Optional npm cache directory
 .npm
