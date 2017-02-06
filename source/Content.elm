@@ -45,7 +45,9 @@ mainEvent =
       """
       Choosing and configuring a bundling tool is one of the hottest topics among front-end developers. In this presentation we take a deep dive into how Webpack, Rollup and Browserify work internally. The main focus will be on understanding the building blocks and comparing the existing implementations.
       """
-      []
+      [ ("linkedin", "https://mt.linkedin.com/in/peter-bakonyi-58b68a74")
+      , ("github", "https://github.com/peterbakonyi05")
+      ]
   ]
 
 preEvents =

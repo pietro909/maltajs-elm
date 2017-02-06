@@ -132,24 +132,23 @@ renderExtendedSchedule schedule =
         [ hr [] [] ]
       ]
     , div [ class "col-xs-12 col-sm-9 col-md-9 col-lg-9 col-sm-offset-3 col-md-offset-3 col-lg-offset-3 eventSpeaker" ]
-      [ div
-      -- speaker's image
-        [ class "speakerImg", attribute "style" "background-image: url(\"/images/speakers/peter-bakonyi.png\");" ]
-        []
-      , h5 []
-        [ span []
-          [ text schedule.title ]
-        , span [ class "compute" ]
-          [ text " with " ]
-        , span []
-          [ text schedule.name ]
-        ]
-      , p []
-        [ text schedule.description ]
-        -- links (type, link)
-      , a [ class "linkedin", href "https://mt.linkedin.com/in/peter-bakonyi-58b68a74" ] []
-      , a [ class "github", href "https://github.com/peterbakonyi05" ] []
-      ]
+      (
+        [ div
+        -- speaker's image
+          [ class "speakerImg", attribute "style" "background-image: url(\"/images/speakers/peter-bakonyi.png\");" ]
+          []
+        , h5 []
+          [ span []
+            [ text schedule.title ]
+          , span [ class "compute" ]
+            [ text " with " ]
+          , span []
+            [ text schedule.name ]
+          ]
+        , p []
+          [ text schedule.description ]
+        ] ++ (List.map (\(c, l) -> a [ class c, href l ] []) schedule.links)
+      )
     ]
 
 
