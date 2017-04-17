@@ -1,3 +1,7 @@
+# THIS IS THE OLD REPOSITORY
+
+## Please refer to [the official Website](https://github.com/MaltaJS/website) in [MaltaJS organization](https://github.com/MaltaJS). Thanks.
+
 # MaltaJS website
 
 ## Requirements
